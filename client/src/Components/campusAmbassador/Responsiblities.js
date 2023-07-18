@@ -1,4 +1,5 @@
 import React from "react";
+import RespTile from "./RespTile";
 
 const respItems = [
   {
@@ -33,8 +34,23 @@ const respItems = [
   },
 ];
 
+const respDivs = [];
+
+respItems.forEach((item, index) => respDivs.push(<RespTile item={item} />));
+
 const Responsiblities = () => {
-  return <div>Responsiblities</div>;
+  return (
+    <div>
+      <hr className="mt-20" />
+      <div className="text-white my-10 flex flex-col items-center border-2 border-solid border-red-600">
+        <h1 className="text-center mb-5 text-3xl md:text-4xl font-bold">
+          Responsiblities
+        </h1>
+        <div>{respDivs}</div>
+      </div>
+      <hr />
+    </div>
+  );
 };
 
 export default Responsiblities;
