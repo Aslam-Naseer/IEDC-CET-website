@@ -42,11 +42,13 @@ const Responsiblities = () => {
   return (
     <div>
       <hr className="mt-20" />
-      <div className="text-white my-10 flex flex-col items-center border-2 border-solid border-red-600">
+      <div className="text-white my-10 flex flex-col items-center">
         <h1 className="text-center mb-5 text-3xl md:text-4xl font-bold">
           Responsiblities
         </h1>
-        <div>{respDivs}</div>
+        <div className="mt-14 grid sm:grid-cols-2 gap-x-10 gap-y-4">
+          {respDivs}
+        </div>
       </div>
       <hr />
     </div>
